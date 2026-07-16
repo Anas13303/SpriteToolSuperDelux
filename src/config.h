@@ -6,6 +6,7 @@
 #include <string>
 #include <cstdint>
 #include <string_view>
+#include <functional>
 
 constexpr int DEFAULT_ROUTINES = 100;
 #define MAX_ROUTINES 310
