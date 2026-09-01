@@ -15,25 +15,31 @@
 ;;
 ;; Clobbers: A
 
+if !More_ExSprite == 1
+    !FS = 16                        ; first fireball slot with 'More Extended Sprites'
+else
+    !FS = 8                         ; first fireball slot withOUT 'More Extended Sprites'
+endif
+
 ?main:
 ?.FireballContact
     PHX                             ; Preserve X.
     LDY #$00                        ; Set initial fireball index.
-?-   LDA !extended_num+8,y           ; If there is no fireball in this slot,
+?-   LDA !extended_num+!FS,y           ; If there is no fireball in this slot,
     CMP #$05
     BNE ?.nothing                    ; check the next one.
-    LDA !extended_x_low+8,y         ; Store clipping B of fireball.
+    LDA !extended_x_low+!FS,y         ; Store clipping B of fireball.
     SEC : SBC #$02
     STA $00
-    LDA !extended_x_high+8,y
+    LDA !extended_x_high+!FS,y
     SBC #$00
     STA $08
     LDA #$0C
     STA $02
-    LDA !extended_y_low+8,y
+    LDA !extended_y_low+!FS,y
     SEC : SBC #$04
     STA $01
-    LDA !extended_y_high+8,y
+    LDA !extended_y_high+!FS,y
     SBC #$00
     STA $09
     LDA #$13
