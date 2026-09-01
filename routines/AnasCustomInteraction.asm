@@ -18,11 +18,11 @@
 ; outputs:
 ;   - $8F (scratch RAM) = formatted as 'SsUFC---'
 ;       - 'S': set to 1 when the player touches the sprite with a star
-;       - 's': set to 1 when the player slides on the sprite (if bit 2 if Tweaker RAM $190F if set)
+;       - 's': set to 1 when the player slides on the sprite (if bit 2 of Tweaker RAM $190F is set)
 ;       - 'U': set to 1 when the player's on top of the sprite in general
-;       - 'F': set to 1 when the sprite's set to fall down (if bit 2 if Tweaker RAM $190F if set)
-;       - 'C': set to 1 when the player cape-dives on the sprite (or if bit 6 of Tweaker RAM $1686 set to make the sprite squishable)
-;   - $157C = direction of the sprite when the player touches it (if bit 5 of Tweaker RAM $1686 set)
+;       - 'F': set to 1 when the sprite's set to fall down (if bit 2 of Tweaker RAM $190F is set)
+;       - 'C': set to 1 when the player cape-dives on the sprite (or if bit 6 of Tweaker RAM $1686 is set to make the sprite squishable)
+;   - $157C = direction of the sprite when the player touches it (if bit 5 of Tweaker RAM $1686 is set)
 ;
 ;======================================================================================================================;
 ?SprMarioInteract:
