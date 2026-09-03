@@ -1,5 +1,6 @@
 ;======================================================================================================================;
 ; this is an adaptation of $01AB46 from Kevin's koopa disassembly: https://www.smwcentral.net/?p=section&a=details&id=23125
+; basically, it gives the player consecutive points when they stomp on multiple sprites without touching the ground
 ; unlike other point-giving routines, this one automatically takes Koopster's 'no consecutive scoring' patch into account!
 ; https://www.smwcentral.net/?p=section&a=details&id=40262
 ;
