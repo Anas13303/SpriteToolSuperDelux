@@ -1,7 +1,8 @@
 ;======================================================================================================================;
 ; this is an adaptation of $01A83B from Kevin's koopa disassembly: https://www.smwcentral.net/?p=section&a=details&id=23125
-; unlike many, many custom player interaction routines, this one automatically takes care of all the important Tweaker bits
-; that the vanilla counterpart does! all you need to do is check whatever bits from $8F you need
+; basically, this allows you to more comfortably code whatever interactions you want for certain things, such as star power,
+; whether or not the player's touching the top of the sprite, whether he's cape-diving on the sprite, etc.
+; please see the 'outputs:' heading for what interactions this accounts for!
 ;
 ; IMPORTANT NOTE: to use properly, make sure the 'Don't use default interaction with Mario' Tweaker bit's enabled!
 ; then check the carry for $01AD7C in your sprite's main code and if it's set, then call this routine!
