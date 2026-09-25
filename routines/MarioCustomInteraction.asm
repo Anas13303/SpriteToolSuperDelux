@@ -13,9 +13,6 @@
 ;
 ; made by DrAnas & Kevin
 ;
-; inputs:
-;   - $154C = timer to disable interaction with the player (if you don't manually set it, it'll be automatically zero)
-;
 ; outputs:
 ;   - $8F (scratch RAM) = formatted as 'SsUFC---'
 ;       - 'S': set to 1 when the player touches the sprite with a star
@@ -37,10 +34,6 @@
     sta $8F                         ;/
 ?NoStar:
     stz $18D2|!addr                 ;> Clear the star kill count.
-    lda !154C,x                     ;\ If contact is disabled, return.
-    bne ?+++                        ;/
-    lda #$08                        ;\ Briefly disable contact.
-    sta !154C,x                     ;/
 ?NotStationaryInteract:
     lda #$14                        ;\
     sta $01                         ;|
@@ -79,7 +72,6 @@
 ?++ lda $8F                         ;|
     ora #$08                        ;|
     sta $8F                         ;/
-?+++
     rtl
 
 ?NoSquish:
