@@ -5,7 +5,7 @@
 ; please note that $15DC is deliberately not taken care of here! it's only used in the vanilla gravity routine at $01802A
 ; as well as the moving ghost house ledge hole's code. this is in case you need to use it for something else in your sprite
 ;
-; the vanilla object interaction routine is also left out in case you wanna that separately or your own custom routine
+; the vanilla object interaction routine is also left out in case you wanna use that separately or your own custom routine
 ;
 ; made by DrAnas, with the original code from Thomas's 'all.log': https://bin.smwcentral.net/u/7012/all.7z
 ;
